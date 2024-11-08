@@ -57,6 +57,9 @@ This Data Analysis project is set to analyze customer data for a subscription se
    - By creating a New column for '**SubscriptionDuration**'. The new colomn is calculated by Subtracting **SubscriptionStart** from **'SubscriptionEnd'** (UnitPrice*Quantity).
    - Average  SubscriptionDuration was calculated using '**Averageif**'.
    - Most Popular Subscription was calculated using '**Countif**'.
+
+
+![PROJECT2 EXCEL](https://github.com/user-attachments/assets/1ba42813-ad6c-4224-95c4-6055f839597f)
      
  c. **For data Visualization**
    - Pivot table is  use to summarize 'SubscriptionType by Revenue', 'SubscriptionType by Count of Revenue', 'SubscriptionType by SubscriptionDuration', 'SubscriptionStart by SubscriptionDuration', '*Cancelled by Revenue'  'SubscriptionEnd Month by Revenue' and 'Average Revenue per SubscriptionType'.
