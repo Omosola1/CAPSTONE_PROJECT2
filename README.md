@@ -41,7 +41,7 @@ This Data Analysis project is set to analyze customer data for a subscription se
 
   e. **Cancelled** - 
 
-  f. **Revenur** -
+  f. **Revenue** -
   
 ### Tools Used
 ---
@@ -49,17 +49,17 @@ This Data Analysis project is set to analyze customer data for a subscription se
  
  a. **For Data Cleaning**
 
-   The Capstone Sale Data Contains '50,000' raw data, how we were left witn '9921' dataset after cleaning the data by removing the duplicates.
+   The Capstone Customer Data Contains '--' raw data, how we were left witn '--' dataset after cleaning the data by removing the duplicates.
 
  b. **For Analysis**
    
    In order to give a proper data analysis of the information gotten from the dataset we explore it through:
-   - By creating a New column for '**Total Sales**'. The new colomn is gotten calculated by multipy **'Quantity'** by **'Unit Price'** (UnitPrice*Quantity).
-   - Average Sales per Product was calculated using '**Averageif**'.
-   - Total Revenue by Region was calculated using '**Sumif**'.
+   - By creating a New column for '**SubscriptionDuration**'. The new colomn is calculated by Subtracting **SubscriptionStart** from **'SubscriptionEnd'** (UnitPrice*Quantity).
+   - Average  SubscriptionDuration was calculated using '**Averageif**'.
+   - Most Popular Subscription was calculated using '**Countif**'.
      
  c. **For data Visualization**
-   - Pivot table is  use to summarize 'Total sales by product', 'Total sales by region', 'Total sales by month', 'Quantity by region', 'Quantity by product' and 'Total number of product sold'.
+   - Pivot table is  use to summarize 'SubscriptionType by Revenue', 'SubscriptionType by Count of Revenue', 'SubscriptionType by SubscriptionDuration', 'SubscriptionStart by SubscriptionDuration', '*Cancelled by Revenue'  'SubscriptionEnd Month by Revenue' and 'Average Revenue per SubscriptionType'.
 
      [LITA PROJECT1 PIVOT.xlsx](https://github.com/user-attachments/files/17630780/LITA.PROJECT1.PIVOT.xlsx)
 
