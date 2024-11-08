@@ -58,13 +58,20 @@ This Data Analysis project is set to analyze customer data for a subscription se
    - Average  SubscriptionDuration was calculated using '**Averageif**'.
    - Most Popular Subscription was calculated using '**Countif**'.
 
+     
 
 ![PROJECT2 EXCEL](https://github.com/user-attachments/assets/1ba42813-ad6c-4224-95c4-6055f839597f)
+
+
      
  c. **For data Visualization**
    - Pivot table is  use to summarize 'SubscriptionType by Revenue', 'SubscriptionType by Count of Revenue', 'SubscriptionType by SubscriptionDuration', 'SubscriptionStart by SubscriptionDuration', '*Cancelled by Revenue'  'SubscriptionEnd Month by Revenue' and 'Average Revenue per SubscriptionType'.
 
-     [LITA PROJECT1 PIVOT.xlsx](https://github.com/user-attachments/files/17630780/LITA.PROJECT1.PIVOT.xlsx)
+
+![PROJECT 2 PIVOT 1](https://github.com/user-attachments/assets/756e3d15-9eba-4164-8b3d-a0a85de9068c)
+
+
+![PROJECT 2 PIVOT jpg 22](https://github.com/user-attachments/assets/fc2d5e25-8673-4a4d-93f7-fa99faa3c803)
 
 
 2. SQL - Structured Query Language for Querying the data [Download Here](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
