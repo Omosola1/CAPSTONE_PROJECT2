@@ -31,17 +31,17 @@ This Data Analysis project is set to analyze customer data for a subscription se
 
    There are 6 Colomns in the dataset, which are the key indicators that give us insight into of the Customer data
 
-  a .**Order Date**- 
+  a .**SubscriptionType**- 
 
-  b. **Product** - 
+  b. **SubscriptionStart** - 
 
-  c. **Region** - 
+  c. **SubscriptionEnd** - 
 
-  d. **Quantity** - 
+  d. **SubscriptionDuration** - 
 
-  e. **Unit Price** - 
+  e. **Cancelled** - 
 
-  f. **Total Sales** -
+  f. **Revenur** -
   
 ### Tools Used
 ---
