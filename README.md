@@ -85,60 +85,38 @@ The Capstone Customer Data Contains '70,000' raw data, how we were left witn a s
    - Average  SubscriptionDuration was calculated using '**Averageif**'.
    - Most Popular Subscription was calculated using '**Countif**'.
 
-```SQL QUERIES
-
-o  retrieve the total number of customers from each region
-
-1. Select  region, count(distinct Customerid) as total_customers 
-from [dbo].[LITA_PROJECTB]
-Group by region;
-
-
-o  retrieve the total number of customers from each region.
-
-2. Select top 1 subscriptiontype, count(distinct customerid) as total_customers
-From [dbo].[LITA_PROJECTB]
-Group by subscriptiontype 
-Order by total_customers desc;
-
-
-o  find customers who canceled their subscription within 6 months
-
-3. Select customer ids
-From [dbo].[LITA_PROJECTB]
-Where datadiff(month, subscriptionstart, subscriptionend) <= 6;
-
-
-o  calculate the average subscription duration for all customers
-
-4. Select avg(datediff(day, subscriptionstart, subscriptionend)) as avg_subscription_duration
-From [dbo].[LITA_PROJECTB]
-
-
-o  find customers with subscriptions longer than 12 months
-
-5. Select customerid
-From [dbo].[LITA_PROJECTB]
-Where datediff(month, subscriptionstart  subscriptionend) > 12;
-
-
-o  calculate total revenue by subscription type
-
-6. Select subscriptiontype,
-Sum(revenue) as total_revenue 
-From [dbo].[LITA_PROJECTB]
-Group by subscriptiontype;
-
-
-o  find the top 3 regions by subscription cancellations
-
-7. Select top 3 region,
-Count(*) as subscriptionend_count
-From [dbo].[LITA_PROJECTB]
-Where subscriptionend is null
-Group by region
-Order by subscriptionend_count desc;
 ```
+SQL QUERIES
+
+SQL Query: SELECT region, COUNT(customer_id) AS customer_count FROM customer_data GROUP BY region; Insight: Shows the distribution of customers across different regions, helping identify regions with a high customer base. Most Popular Subscription Type
+
+
+SQL Query: SELECT subscription_type, COUNT(customer_id) AS subscription_count FROM customer_data GROUP BY subscription_type ORDER BY subscription_count DESC; Insight: Identifies the most popular subscription types, allowing us to focus on high-demand services. Customers Who Canceled Within 6 Months
+
+
+SQL Query: SELECT customer_id, subscription_type FROM customer_data WHERE DATEDIFF(month, subscription_start_date, cancellation_date) <= 6; Insight: Helps identify potential dissatisfaction by tracking early cancellations, informing retention strategies. Average Subscription Duration
+
+
+SQL Query: SELECT AVG(DATEDIFF(month, subscription_start_date, subscription_end_date)) AS avg_duration FROM customer_data; Insight: Reveals the average length of subscriptions, helping assess customer retention. Customers with Subscriptions Over 12 Months
+
+
+SQL Query: SELECT customer_id, subscription_type FROM customer_data WHERE DATEDIFF(month, subscription_start_date, CURRENT_DATE) > 12; Insight: Identifies loyal customers with long-term subscriptions. Total Revenue by Subscription Type
+
+
+SQL Query: SELECT subscription_type, SUM(revenue) AS total_revenue FROM customer_data GROUP BY subscription_type; Insight: Shows which subscription types are the most profitable. Top 3 Regions by Cancellations
+
+
+SQL Query: SELECT region, COUNT(cancellation_date) AS cancellations FROM customer_data GROUP BY region ORDER BY cancellations DESC; Insight: Indicates regions with the highest cancellation rates for targeted retention campaigns. Total Active vs. Canceled Subscriptions
+
+
+SQL Query: SELECT SUM(CASE WHEN cancellation_date IS NULL THEN 1 ELSE 0 END) AS active_subscriptions, SUM(CASE WHEN cancellation_date IS NOT NULL THEN 1 ELSE 0 END) AS canceled_subscriptions FROM customer_data; Insight: Provides an overview of current active vs. canceled subscriptions.
+
+```
+
+
+
+### Data Analysis
+---
 
 
 
@@ -154,139 +132,20 @@ Order by subscriptionend_count desc;
 ![PROJECT 2 PIVOT jpg 22](https://github.com/user-attachments/assets/fc2d5e25-8673-4a4d-93f7-fa99faa3c803)
 
 
-2. SQL - Structured Query Language for Querying the data [Download Here](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 
-   - **For Analysis**
-
- We wrote queries to extract key insights by. 
--  retrieve the total sales for each product category.
-- find the number of sales transactions in each region.
-- find the highest-selling product by total sales value.
-- calculate total revenue per product.
-- calculate monthly sales totals for the current year.
-- find the top 5 customers by total purchase amount.
-- calculate the percentage of total sales contributed by each region.
-- identify products with no sales in the last quarter. 
 
 3. Microsoft PowerBI for Visualisation [Download here](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
  
-  a. **For Data Cleaning**
-
-   The Dataset is upload into Power Bi and cleaned
-   
-  b. **For Analysis**
-   
-   In order to give a proper data analysis of the information gotten from the dataset we explore it through:
-
-   - Creating New measures for: Average Sales, Product Count and Quantity count.
- 
-  c. **For data Visualization**
-
-  - Created a dashboard that visualizes the insights found in Excel and SQL. The
-     dashboard includes a sales overview, top-performing products, and 
-     regional breakdown using Text box, Cards, Map, Charts and a Slicer
-
-![PROJECT2 POWERBI](https://github.com/user-attachments/assets/b8f9b9bc-4c10-46a4-ace2-110d69c87ec3)
-
-
-4. **Github For Portfolio Building ** 🗃️
   
-  - Building up your portfolio as an Data Analyst
 
-### Data Cleaning and Preparations
----
-To achive a proper Data Cleaning and preparations, I perform the following action:
-1. Data loading and Inspection
-2. Handling missing variables
-3. Data Cleaning and formatting
 
-### Exploratory Data Analysis
----
-EDA involves the examining the Data From the retail store in order to get some fact such as  ;
-
-- Sales performance of the retail store
-- What is the overall sales trend in the store
-- Total sales by product, region, and month
-- Average sales per product
-- Total revenue by region
-- Highest Selling Products
-  
-### Data Analysis
----
-Here I include all basic lines of queries and some of the DAX expressions used during this analysis;
-
-```SQL
-select * from [dbo].[LITA_PROJECTA]
-
------ retrieve the total sales for each product category----
-
-SELECT Product, SUM ([Total_Sales]) AS TotalSales
-FROM [dbo].[LITA_PROJECTA]
-GROUP BY Product
-
-----find the number of sales transactions in each region----
-SELECT Region, COUNT(OrderID) AS Number_Of_Transactions
-FROM [dbo].[LITA_PROJECTA]
-GROUP BY Region
-ORDER BY Number_Of_Transactions DESC;
-
-----find the highest-selling product by total sales value----
-
-SELECT Product, SUM([Total_Sales]) AS TotalSales
-FROM [dbo].[LITA_PROJECTA]
-GROUP BY Product
-ORDER BY TotalSales DESC; 
-
-----calculate total Sales per product----
-
-SELECT Product, SUM(CAST(Quantity AS INT) * CAST(UnitPrice AS DECIMAL(10, 2))) AS TotalSales
-FROM [dbo].[LITA_PROJECTA]
-GROUP BY Product
-ORDER BY TotalSales DESC;
-
----- calculate monthly sales totals for the current year.---
-
-SELECT OrderDate, SUM(Total_sales) AS monthlySales
-FROM [dbo].[LITA_PROJECTA]
-WHERE OrderDate between '2024-01-01' and '2024-12-31'
-GROUP BY OrderDate
-Order by OrderDate
-
-----find the top 5 customers by total purchase amount----
-
-SELECT TOP 5
-    [Customer_Id], 
-    SUM([Total_Sales]) AS TotalPurchase
-FROM 
-    [dbo].[LITA_PROJECTA]
-GROUP BY 
-    [Customer_Id]
-ORDER BY 
-    TotalPurchase DESC;
-
-	----calculate the percentage of total sales contributed by each region----
-
-	WITH RegionSales AS    
-	(SELECT  Region, 
-    SUM([Total_Sales]) AS RegionSales
-    FROM [dbo].[LITA_PROJECTA]
-    GROUP BY Region),
-TotalSales AS (
-    SELECT SUM([Total_Sales]) AS OverallTotalSales
-    FROM [dbo].[LITA_PROJECTA])
-SELECT 
-    rs.Region,
-    rs.RegionSales,
-    (rs.RegionSales * 100.0 / ts.OverallTotalSales) AS PercentageOfTotalSales
-FROM RegionSales rs
-CROSS JOIN 
-    TotalSales ts;
-```
 
 ### Data Visualization                  
 💹📊📉
-Tables	
-CHARTS
+
+
+
+
 
 CONTACT ADDRESS:
 Number 35 Olajesu street Agodo ,Ikotun. Lagos 🏠
