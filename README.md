@@ -19,7 +19,7 @@ CAPSTONE PROJECT2 (CUSTOMER DATA)
 
 ### Project Overview
 ---
-This Data Analysis project is set to analyze customer data for a subscription service to identify segments and trends. The goal is to analyse the various parameter, customer behavior, track subscription types, and identify key trends in cancellations and renewals in the data received .Then gather enough insight to make reasonable decisions which will enable us to tell compelling stories around our data from the findings gotten and to know the best performance from our Capstone Customer data.                
+This project aims to analyze customer data for a subscription service to identify meaningful segments and trends in customer behavior. By understanding subscription patterns, cancellations, renewals, and key subscription types, the project will provide insights that can help optimize customer acquisition, retention strategies, and overall service offerings.              
 
 ### Data
 ---
@@ -31,17 +31,17 @@ This Data Analysis project is set to analyze customer data for a subscription se
 
    There are 6 Colomns in the dataset, which are the key indicators that give us insight into of the Customer data
 
-  a .**SubscriptionType**- 
+  a .**SubscriptionType**-  SubscriptionType refers to the specific plan or model that a customer chooses when subscribing to a service
 
-  b. **SubscriptionStart** - 
+  b. **SubscriptionStart** - The SubscriptionStart refers to the date when a customer first subscribes to a service or plan.
 
-  c. **SubscriptionEnd** - 
+  c. **SubscriptionEnd** -  The SubscriptionEnd is the date when the customer's current subscription expires.
 
-  d. **SubscriptionDuration** - 
+  d. **SubscriptionDuration** - SubscriptionDuration is the total length of time a customer has been subscribed to the service, calculated as the difference between the SubscriptionStart and SubscriptionEnd dates
 
-  e. **Cancelled** - 
+  e. **Cancelled** -  Cancelled refers to the status of a subscription that has been terminated before its SubscriptionEnd date
 
-  f. **Revenue** -
+  f. **Revenue** -  is the total amount of money generated from subscriptions during a given period.
   
 ### Tools Used
 ---
