@@ -134,8 +134,7 @@ SQL Query: SELECT SUM(CASE WHEN cancellation_date IS NULL THEN 1 ELSE 0 END) AS 
 
 
 
-3. Microsoft PowerBI for Visualisation [Download here](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
- 
+
   
 
 
