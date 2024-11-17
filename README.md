@@ -141,15 +141,42 @@ SQL Query: SELECT SUM(CASE WHEN cancellation_date IS NULL THEN 1 ELSE 0 END) AS 
 
 ### Data Visualization                  
 💹📊📉
+---
+
+The Power BI dashboard includes interactive visuals to make the insights more accessible.
+
+Total Customers by Region - Map Chart: Insight: Displays customer distribution across regions, allowing for targeted regional marketing.
+
+Popular Subscription Types - Bar Chart: Insight: Highlights the most popular subscription types, useful for product development focus.
+
+Average Subscription Duration - Gauge Chart: Insight: Illustrates average subscription duration, providing a benchmark for customer retention.
+
+Revenue by Subscription Type - Column Chart: Insight: Showcases total revenue from each subscription type, helping prioritize revenue-generating services.
+
+Top 3 Regions by Cancellations - Donut Chart: Insight: Visualizes cancellation hotspots for regional retention analysis.
+
+### SUMMARY
+---
+
+The analysis reveals that while certain regions have high customer counts, some of these areas also experience higher rates of subscription cancellations. The majority of revenue is derived from a few popular subscription types, indicating an opportunity for upselling other services. Additionally, customers who canceled early in their subscription tenure may indicate areas for service improvement or loyalty incentives.
+
+
+### Results and Findings
+
+
+### Recommendations
+--- 
+
+Focus on Retention: Implement loyalty programs or targeted offers in high-cancellation regions. Expand Popular Subscriptions: Prioritize promotions and product enhancements for high-demand subscription types. Engage Long-Term Customers: Offer exclusive benefits to customers with extended subscriptions to maintain loyalty. Monitor Early Cancellations: Track customers at risk of canceling within the first 6 months to offer timely interventions.
+
+### Conclusion
+--- 
+
+The LITA Capstone Customer Data Analysis project successfully uncovers key insights into customer distribution, popular services, and subscription trends. Using these findings, the company can make data-driven decisions to enhance customer satisfaction, increase revenue, and strategically address customer retention challenges.
 
 
 
 
-
-CONTACT ADDRESS:
-Number 35 Olajesu street Agodo ,Ikotun. Lagos 🏠
-
-📧
 ``` Email 
 omo_sola@yahoo.com
 ```
