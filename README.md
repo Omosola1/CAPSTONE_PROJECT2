@@ -85,6 +85,62 @@ The Capstone Customer Data Contains '70,000' raw data, how we were left witn a s
    - Average  SubscriptionDuration was calculated using '**Averageif**'.
    - Most Popular Subscription was calculated using '**Countif**'.
 
+```SQL QUERIES
+
+o  retrieve the total number of customers from each region
+
+1. Select  region, count(distinct Customerid) as total_customers 
+from [dbo].[LITA_PROJECTB]
+Group by region;
+
+
+o  retrieve the total number of customers from each region.
+
+2. Select top 1 subscriptiontype, count(distinct customerid) as total_customers
+From [dbo].[LITA_PROJECTB]
+Group by subscriptiontype 
+Order by total_customers desc;
+
+
+o  find customers who canceled their subscription within 6 months
+
+3. Select customer ids
+From [dbo].[LITA_PROJECTB]
+Where datadiff(month, subscriptionstart, subscriptionend) <= 6;
+
+
+o  calculate the average subscription duration for all customers
+
+4. Select avg(datediff(day, subscriptionstart, subscriptionend)) as avg_subscription_duration
+From [dbo].[LITA_PROJECTB]
+
+
+o  find customers with subscriptions longer than 12 months
+
+5. Select customerid
+From [dbo].[LITA_PROJECTB]
+Where datediff(month, subscriptionstart  subscriptionend) > 12;
+
+
+o  calculate total revenue by subscription type
+
+6. Select subscriptiontype,
+Sum(revenue) as total_revenue 
+From [dbo].[LITA_PROJECTB]
+Group by subscriptiontype;
+
+
+o  find the top 3 regions by subscription cancellations
+
+7. Select top 3 region,
+Count(*) as subscriptionend_count
+From [dbo].[LITA_PROJECTB]
+Where subscriptionend is null
+Group by region
+Order by subscriptionend_count desc;
+```
+
+
 
 ![PROJECT2 EXCEL](https://github.com/user-attachments/assets/b34628b2-e8eb-449d-a9e1-164cc3d224fe)
 
