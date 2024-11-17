@@ -56,6 +56,19 @@ This project aims to analyze customer data for a subscription service to identif
   
   - Building up your portfolio as an Data Analyst
 
+### Data Cleaning and Preparations
+---
+ 
+ **For Data Cleaning**
+
+To achive a proper Data Cleaning and preparations, I perform the following action:
+1. Data loading and Inspection
+2. Handling missing variables
+3. Data Cleaning and formatting
+
+The Capstone Customer Data Contains '70,000' raw data, how we were left witn a smaller dataset after cleaning the data by removing the duplicates.
+
+
  b. **For Analysis**
    
    In order to give a proper data analysis of the information gotten from the dataset we explore it through:
