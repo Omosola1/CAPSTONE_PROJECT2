@@ -17,6 +17,13 @@ CAPSTONE PROJECT2 (CUSTOMER DATA)
 
 [Data Visualization](#data-visualization)
 
+[Results and Findings](#results-and-findings)
+
+[Recommendations](#recommendations)
+
+[Conclusion](#conclusion)
+
+
 ### Project Overview
 ---
 This project aims to analyze customer data for a subscription service to identify meaningful segments and trends in customer behavior. By understanding subscription patterns, cancellations, renewals, and key subscription types, the project will provide insights that can help optimize customer acquisition, retention strategies, and overall service offerings.              
@@ -71,8 +78,7 @@ The Capstone Customer Data Contains '70,000' raw data, how we were left witn a s
 
 ### Exploratory Data Analysis
 
-
- b. **For Analysis**
+**Excel**   
    
    In order to give a proper data analysis of the information gotten from the dataset we explore it through:
    - By creating a New column for '**SubscriptionDuration**'. The new colomn is calculated by Subtracting **SubscriptionStart** from **'SubscriptionEnd'** (UnitPrice*Quantity).
