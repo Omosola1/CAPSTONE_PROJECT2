@@ -46,10 +46,15 @@ This project aims to analyze customer data for a subscription service to identif
 ### Tools Used
 ---
 1. Microsoft Excel [Download Here](https://wwwmicrosoft.com)
- 
- a. **For Data Cleaning**
 
-   The Capstone Customer Data Contains '--' raw data, how we were left witn '--' dataset after cleaning the data by removing the duplicates.
+2. SQL - Structured Query Language for Querying the data [Download Here](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+
+3. Microsoft PowerBI for Visualisation [Download here](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
+   
+ 
+ 4. Github For Portfolio Building  🗃️
+  
+  - Building up your portfolio as an Data Analyst
 
  b. **For Analysis**
    
