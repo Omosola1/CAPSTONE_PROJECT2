@@ -69,6 +69,9 @@ To achive a proper Data Cleaning and preparations, I perform the following actio
 The Capstone Customer Data Contains '70,000' raw data, how we were left witn a smaller dataset after cleaning the data by removing the duplicates.
 
 
+### Exploratory Data Analysis
+
+
  b. **For Analysis**
    
    In order to give a proper data analysis of the information gotten from the dataset we explore it through:
